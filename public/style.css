@@ -1,0 +1,175 @@
+#mainNav {
+    a {
+      color: #eee;
+    }
+  }
+  #nav > li > a{
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  header{
+    margin-top: 200px;
+    margin-bottom: 200px;
+  }
+  .img-circle {
+    margin: 4em;
+  }
+  img {
+    border-radius: 50%;
+  }
+
+  .btn-default:hover{
+    background-color: #1a28be;
+    border-color: #fff;
+    color: white;
+  }
+  .btn-default,
+  .btn-default:focus,
+  .btn-default.focus,
+  .btn-default:active,
+  .btn-default.active {
+    background-color: #1E30F3;
+    color: white;
+  }
+  a {
+    color: #585d6a;
+  }
+
+  a:hover,
+  a:focus {
+      color: #F29492;
+  }
+  .text-primary {
+    color: #F29492;
+  }
+  .bg-primary {
+    background-color: #585d6a;
+  }
+
+  footer {
+    padding-top: 20px;
+    margin-top: 60px;
+    a {
+      color: #F29492;
+    }
+  }
+
+
+  hr {
+      max-width: 100px;
+      border-color: blue;
+      border-width: 3px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .about-hr {
+    margin-right: 0;
+  }
+  .greeting-hr {
+    margin-left: 0 !important;
+  }
+  .skills-hr {
+    max-width: 50px !important;
+  }
+  .portfolio-box {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      max-width: 650px;
+  }
+
+  .portfolio-box .portfolio-box-caption {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: #fff;
+      opacity: 0;
+      background: rgba(88, 93, 106, 0.67);
+      -webkit-transition: all .35s;
+      -moz-transition: all .35s;
+      transition: all .35s;
+  }
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      text-align: center;
+      transform: translateY(-50%);
+  }
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+      padding: 0 15px;
+  }
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+  }
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+      font-size: 18px;
+  }
+
+  .portfolio-box:hover .portfolio-box-caption {
+      opacity: 1;
+  }
+
+  @media(min-width:768px) {
+      .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+          font-size: 16px;
+      }
+
+      .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+          font-size: 22px;
+      }
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container-typewritter{
+    overflow: hidden;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    overflow: hidden;
+}
+}
+.container-typewritter .text{
+    position: relative;
+    margin-left: 10px;
+    color: #4070F4;
+    font-size: 30px;
+    font-weight: 600;
+}
+.container-typewritter .text.first-text{
+    color: #000000;
+}
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    border-left: 2px solid #4070F4;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
