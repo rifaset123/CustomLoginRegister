@@ -18,6 +18,9 @@
             <ul class="navbar-nav ms-auto">
                 @guest
                     <li class="nav-item">
+                        <a class="nav-link {{ (request()->is('login')) ? 'active' : '' }}" href="{{ route('kirim-email') }}">Send Mail</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {{ (request()->is('login')) ? 'active' : '' }}" href="{{ route('dashboard') }}">Dashboard</a>
                     </li>
                     <li class="nav-item">
