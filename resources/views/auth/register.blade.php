@@ -8,7 +8,7 @@
         <div class="card">
             <div class="card-header">Register</div>
             <div class="card-body">
-                <form action="{{ route('store') }}" method="post">
+                <form action="{{ route('store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3 row">
                         <label for="name" class="col-md-4 col-form-label text-md-end text-start">Name</label>
@@ -43,6 +43,18 @@
                           <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
                         </div>
                     </div>
+                    {{-- gambar --}}
+                    <div class="mb-3 row">
+                        <label for="photo" class="col-md-4 col-form-label text-md-end mt-4 text-start">Photo</label>
+                        <div class="col-md-6">
+                          <img class="img-preview img-fluid mb-3 col-sm-5">
+                          <input type="file" class="form-control @error('photo') is-invalid @enderror" id="photo" name="photo" value="{{ old('photo')}}" onchange="previewImage()">
+                            @if ($errors->has('photo'))
+                                <span class="text-danger">{{ $errors->first('photo') }}</span>
+                            @endif
+                        </div>
+                        {{-- <img id="preview" src="#" alt="your image" class="mt-3" style="display:none;"/> --}}
+                    </div>
                     <div class="mb-3 row">
                         <input type="submit" class="col-md-3 offset-md-5 btn btn-primary" value="Register">
                     </div>
@@ -52,5 +64,5 @@
         </div>
     </div>
 </div>
-
 @endsection
+
