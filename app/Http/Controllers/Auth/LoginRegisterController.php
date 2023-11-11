@@ -258,7 +258,7 @@ class LoginRegisterController extends Controller
     // Lakukan pembaruan data
     $user->update($userData);
 
-        return redirect()->route('users')
-                ->withSuccess('Data Updated Successfully');
+    return redirect()->route('users')
+            ->withSuccess('Data Updated Successfully');
     }
 }

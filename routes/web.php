@@ -5,7 +5,7 @@ use App\Http\Controllers\SendEmailController;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\File;
-
+use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,5 +46,5 @@ Route::post('/post-email', [SendEmailController::class,
 // buat upload file
 Storage::disk('local')->put('file.txt', 'Contents');
 
-// hapus
-
+// gallery
+Route::resource('gallery', GalleryController::class);

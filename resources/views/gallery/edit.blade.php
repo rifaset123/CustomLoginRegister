@@ -3,19 +3,17 @@
 @section('content')
 
 <body>
-
     <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
-                        <form action="{{ route('user.update', $users->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('gallery.update', $games->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
-
                             <div class="form-group mb-3">
-                                <label class="font-weight-bold">New Name</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="name" value="{{ old('name', $users->name) }}" placeholder="Insert New Username">
+                                <label class="font-weight-bold">New Title</label>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $games->title) }}" placeholder="Insert New Title">
 
                                 <!-- error message untuk title -->
                                 @error('title')
@@ -26,8 +24,8 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label class="font-weight-bold">New Email</label>
-                                <input type="text" class="form-control @error('content') is-invalid @enderror" name="email" rows="5" value="{{ old('email', $users->email) }}" placeholder="Insert New Email"></input>
+                                <label class="font-weight-bold">New Description</label>
+                                <input type="text" class="form-control @error('content') is-invalid @enderror" name="description" rows="5" value="{{ old('description', $games->description) }}" placeholder="Insert New Description"></input>
 
                                 <!-- error message untuk content -->
                                 @error('content')
@@ -36,14 +34,14 @@
                                     </div>
                                 @enderror
                             </div>
-                            <label class="font-weight-bold">Image</label>
+                            <label class="font-weight-bold mb-2">New Image</label>
                             <div class="form-group mb-3">
-                                @if($users->photo)
-                                    <img src="{{asset('storage/'.$users->photo )}}"class="img-preview img-fluid mb-3" width="250px">
+                                @if($games->picture)
+                                    <img src="{{asset('storage/'. $games->picture )}}"class="img-preview img-fluid mb-3" width="400px">
                                 @else
                                     <img class="img-preview img-fluid mb-3 col-sm-5">
                                 @endif
-                                <input type="file" class="form-control" name="photo" id="photo" onchange="previewImage()">
+                                <input type="file" class="form-control" name="picture" id="picture" onchange="previewImageGallery2()">
                             </div>
                             @error('image')
                                 <span class="invalid-feedback" role="alert">
@@ -51,8 +49,8 @@
                                 </span>
                             @enderror
 
-                            <button type="submit" class="btn btn-md btn-primary">UPDATE</button>
-                            <button type="reset" class="btn btn-md btn-warning">RESET</button>
+                            <button type="submit" class="btn btn-md btn-primary">Update</button>
+                            <button type="reset" class="btn btn-md btn-warning">Reset</button>
                         </form>
                     </div>
                 </div>
