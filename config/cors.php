@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' =>  ['http://localhost:8000'], // Ganti dengan alamat yang diizinkan untuk mengakses API
 
     'allowed_origins_patterns' => [],
 

@@ -6,6 +6,10 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\File;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\InfoController;
+use App\Http\Controllers\ApiController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +52,10 @@ Storage::disk('local')->put('file.txt', 'Contents');
 
 // gallery
 Route::resource('gallery', GalleryController::class);
+
+// API
+Route::get('/api/info', [InfoController::class, 'index'])->name('info');
+
+// Route::get('/api/gallery', [ApiController::class, 'index'])->name('info');
+
+Route::get('/api/test', [ApiController::class, 'index']);

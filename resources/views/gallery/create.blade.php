@@ -5,7 +5,11 @@
             <div class="card">
                 <div class="card-header">Add Game</div>
                 <div class="card-body">
-            <form action="{{ route('gallery.store') }}" method="POST" enctype="multipart/form-data">
+            {{-- BTW GA PAKE API --}}
+            {{-- <form action="{{ route('gallery.store') }}" method="POST" enctype="multipart/form-data"> --}}
+
+            {{-- PAKE API --}}
+            <form action="{{ route('apiPostPicture') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 row">
                     <label for="title" class="col-md-4 col-form-label text-md-end text-start">Title</label>
