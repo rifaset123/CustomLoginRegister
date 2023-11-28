@@ -21,10 +21,10 @@
                                             <h4>{{$gallery->title}}</h4>
                                         </div>
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('gallery.destroy', $gallery->id) }}" method="POST">
-                                            <a href="{{ route('gallery.edit', $gallery->id)}}"  class="btn btn-outline-primary mt-2 ms-4 mb-2">Edit</a>
+                                            <a href="{{ route('gallery.edit', $gallery->id)}}"  class="btn btn-outline-primary mt-2 ms-4 mb-4">Edit</a>
                                             @csrf
                                             @method('DELETE')
-                                                <button type="submit" class="btn btn-danger mt-2 mb-2">Hapus</button>
+                                                <button type="submit" class="btn btn-danger mt-2 mb-4">Delete</button>
                                             </form>
                                         </a>
                                     </div>

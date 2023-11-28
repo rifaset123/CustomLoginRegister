@@ -93,7 +93,8 @@ class LoginRegisterController extends Controller
         ]);
 
         $content = [
-            'subject'   => $request->name,
+            'name'      => $request-> name,
+            'subject'   => $request-> name,
             'body'      => $request->email
             ];
 

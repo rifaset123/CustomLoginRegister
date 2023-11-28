@@ -50,10 +50,10 @@
                                 </td>
                                 <td class="text-start">
                                     <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('user.destroy', $post->id) }}" method="POST">
-                                        <a href="{{ route('user.edit', $post->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                        <a href="{{ route('user.edit', $post->id) }}" class="btn btn-sm btn-primary">Edit</a>
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                     </form>
                                 </td>
                             </tr>
